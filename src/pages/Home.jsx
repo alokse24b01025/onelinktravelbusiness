@@ -171,7 +171,7 @@ const Home = () => {
 
 
 {/* SECÇÃO 3: SERVIÇOS - DESIGN FIEL AO SCREENSHOT COM SUA LÓGICA MANTIDA */}
-<section id="services" className="py-12 md:py-16 px-6 md:px-20 bg-transparent scroll-mt-20">
+<section className="py-12 px-6 md:px-20 bg-gradient-to-br from-[#f8c1cc] via-[#b4c6ef] to-[#7195e0] min-h-screen flex flex-col justify-center overflow-hidden">
   
   {/* Cabeçalho Idêntico à Imagem */}
   <div className="text-center mb-12">
@@ -352,7 +352,7 @@ const Home = () => {
 
 
 {/* SECÇÃO 5: HISTÓRIAS DE CLIENTES - FIEL À IMAGEM */}
-<section className="py-12 md:py-16 px-6 md:px-20 bg-transparent flex flex-col items-center justify-center">
+<section id="contact" className="py-20 px-6 md:px-20 min-h-[85vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#fcc2ab] via-[#a6c1ee] to-[#6d94df]">
   
   {/* Cabeçalho Compacto */}
   <div className="text-center mb-10">
