@@ -115,7 +115,8 @@ const Home = () => {
       className="text-2xl md:text-[40px] font-medium text-[#1e293b] max-w-2xl mx-auto leading-tight px-4" 
       style={{ fontFamily: 'var(--font-manrope)' }}
     >
-      Países com apoio completo para imigração
+      Países com apoio completo para imigração 
+       
     </h2>
   </div>
 
@@ -166,18 +167,53 @@ const Home = () => {
 </section>
 
 
-{/* SECÇÃO 3: SERVIÇOS - VERSÃO ULTRA-COMPACTA */}
+
+
+
+{/* SECÇÃO 3: SERVIÇOS - DESIGN FIEL AO SCREENSHOT COM SUA LÓGICA MANTIDA */}
 <section id="services" className="py-12 md:py-16 px-6 md:px-20 bg-transparent scroll-mt-20">
-  <div className="text-center mb-10">
-    <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-gray-400 mb-4" style={{ fontFamily: 'var(--font-worksans)' }}>
+  
+  {/* Cabeçalho Idêntico à Imagem */}
+  <div className="text-center mb-12">
+    <p className="text-[12px] font-bold text-black mb-4 uppercase tracking-normal" 
+       style={{ fontFamily: 'var(--font-worksans)' }}>
       Serviços
     </p>
-    <h2 className="text-2xl md:text-[34px] font-medium text-gray-900 mb-6 px-4" style={{ fontFamily: 'var(--font-manrope)' }}>
-      Soluções de vistos para todos os caminhos
+    
+    <h2 className="text-4xl md:text-[54px] font-medium text-black mb-6 tracking-tight leading-[1.1]" 
+        style={{ fontFamily: 'var(--font-manrope)' }}>
+      Soluções de vistos para cada objetivo
     </h2>
+    
+    <p className="text-gray-500 text-sm md:text-[15px] max-w-3xl mx-auto leading-relaxed mb-10" 
+       style={{ fontFamily: 'var(--font-worksans)' }}>
+      Explore as suas oportunidades internacionais com os nossos serviços completos de vistos. <br className="hidden md:block" />
+      Compreendemos as exigências e complexidades dos processos internacionais.
+    </p>
+
+    {/* Os Dois Botões do Screenshot */}
+    <div className="flex flex-row items-center justify-center gap-8">
+      <button 
+        onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
+        className="bg-white border border-black text-black px-8 py-2.5 rounded-full font-bold text-[13px] hover:bg-black hover:text-white transition-all shadow-sm"
+      >
+        Explorar serviços
+      </button>
+      
+      <button 
+        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+        className="flex items-center gap-2 text-[13px] font-bold text-black hover:opacity-60 transition-all"
+      >
+        Contacte nos 
+        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
   </div>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+  {/* Grid de Cards - Mantendo sua lógica de expansão e estrutura original */}
+  <div id="services-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
     {[
       { 
         title: "Visto de Trabalho", 
@@ -205,7 +241,7 @@ const Home = () => {
           key={i} 
           className="bg-white/80 backdrop-blur-md rounded-[2rem] shadow-sm border border-white flex flex-col h-[440px] overflow-hidden transition-all duration-500 hover:-translate-y-1 mx-auto w-full max-w-[310px]"
         >
-          {/* Área de Conteúdo Ultra-Compacta */}
+          {/* Área de Conteúdo */}
           <div className="p-6 pb-2 flex flex-col flex-none">
             <h3 className="text-lg md:text-xl font-bold mb-2 text-black" style={{ fontFamily: 'var(--font-manrope)' }}>
               {service.title}
@@ -231,7 +267,7 @@ const Home = () => {
             </div>
           </div>
           
-          {/* Imagem - Toca o botão e preenche o resto do div */}
+          {/* Imagem */}
           <div className="relative flex-grow w-full overflow-hidden transition-all duration-500 ease-in-out">
              <img 
                src={service.img} 
@@ -265,9 +301,10 @@ const Home = () => {
       className="text-black/80 text-[11px] md:text-[13px] font-medium max-w-lg mx-auto leading-tight" 
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
-      Conecte-se com os nossos especialistas e transforme os seus sonhos de viagem <br className="hidden md:block" /> em realidade
+      Conecte-se com os nossos especialistas e transforme os seus sonhos de viagem em realidade
     </p>
   </div>
+
 
   {/* Image Bento Grid - Reduced heights to fit in viewport */}
   <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-8">
@@ -313,97 +350,99 @@ const Home = () => {
 
 
 
-{/* SECÇÃO 5: HISTÓRIAS DE CLIENTES */}
-<section className="py-20 px-6 md:px-20 min-h-[80vh] flex flex-col items-center justify-center bg-gradient-to-tr from-[#fbc2eb] via-[#a6c1ee] to-[#c2e9fb]">
+
+{/* SECÇÃO 5: HISTÓRIAS DE CLIENTES - FIEL À IMAGEM */}
+<section className="py-12 md:py-16 px-6 md:px-20 bg-transparent flex flex-col items-center justify-center">
   
-  {/* Texto de Cabeçalho */}
-  <div className="text-center mb-12">
+  {/* Cabeçalho Compacto */}
+  <div className="text-center mb-10">
     <h2 
-      className="text-4xl md:text-5xl font-medium text-black mb-3 tracking-tight" 
+      className="text-3xl md:text-[42px] font-medium text-black mb-3 tracking-tight" 
       style={{ fontFamily: 'var(--font-manrope)' }}
     >
-      Histórias de clientes
+      Histórias de Clientes
     </h2>
     <p 
-      className="text-gray-700 text-[13px] md:text-base font-medium" 
+      className="text-gray-600 text-[11px] md:text-sm font-normal tracking-wide" 
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
-      Experiências reais de viajantes que ajudamos.
+      Experiências reais de viajantes que ajudamos
     </p>
   </div>
 
-  {/* Grelha de Testemunhos - Layout Responsivo */}
-  <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+  {/* Grelha de Testemunhos */}
+  <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
     {[
       {
-        name: "Miguel Rodrigues",
-        role: "Estudante, University of London",
-        content: "A One Link tornou o meu processo de visto de estudante incrivelmente simples e livre de stress.",
+        name: "John Jose Duarte Manuel",
+        role: "Estudante",
+        uni: "Universidade de Çukurova",
+        loc: "Turquia",
+        content: "Processo de visto de estudante tranquilo para estudar na Turquia.",
         img: "/client-1.jpg"
       },
       {
-        name: "Ana Martins",
-        role: "Empreendedora, Consultoria Global",
-        content: "Profissionalismo, eficiência e um apoio incrível durante todo o meu pedido de visto de negócios.",
+        name: "Graciana Isabel Paulo Mucuco",
+        role: "Estudante",
+        uni: "Universidade Széchenyi István",
+        loc: "Hungria",
+        content: "Apoio profissional garantiu admissão na universidade na Hungria.",
         img: "/client-2.jpg"
       },
       {
-        name: "João Silva",
-        role: "Viajante, Negócios Internacionais",
-        content: "Não teria conseguido navegar nas minhas viagens internacionais sem a orientação especializada da One Link.",
+        name: "Ernesto Kiteculo",
+        role: "Estudante",
+        uni: "Universidade de Mineração de São Petersburgo",
+        loc: "Rússia",
+        content: "Orientação especializada tornou meu visto americano simples e seguro.",
         img: "/client-3.jpg"
       }
     ].map((client, index) => (
       <div 
         key={index} 
-        className="bg-white/70 backdrop-blur-lg rounded-[2.5rem] p-8 shadow-sm border border-white/40 flex flex-col justify-between transition-all hover:bg-white/90"
+        className="bg-[#F2F2F2] rounded-[2rem] p-8 flex flex-col shadow-sm transition-all hover:shadow-md"
       >
-        <div>
-          {/* Classificação em Estrelas */}
-          <div className="flex gap-1 mb-6">
-            {[...Array(5)].map((_, i) => (
-              <svg key={i} className="w-4 h-4 text-black fill-current" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-
-          <p 
-            className="text-gray-800 text-[14px] md:text-[15px] leading-relaxed mb-8 font-normal" 
-            style={{ fontFamily: 'var(--font-worksans)' }}
-          >
-            "{client.content}"
-          </p>
+        {/* Estrelas alinhadas à esquerda */}
+        <div className="flex gap-0.5 mb-5 text-black">
+          {[...Array(5)].map((_, i) => (
+            <svg key={i} className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
         </div>
 
+        {/* Depoimento */}
+        <p 
+          className="text-black text-[13.5px] md:text-[14.5px] leading-snug mb-8 font-normal" 
+          style={{ fontFamily: 'var(--font-worksans)' }}
+        >
+          {client.content}
+        </p>
+
+        {/* Info do Cliente */}
         <div className="flex items-center gap-4 mt-auto">
-          {/* Foto do Cliente ou Ícone de Utilizador como reserva */}
-          <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-200 border border-white shadow-sm overflow-hidden text-gray-500">
-            {client.img ? (
-              <img 
-                src={client.img} 
-                alt={client.name} 
-                className="w-full h-full object-cover" 
-              />
-            ) : (
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
-            )}
+          <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-300 flex-shrink-0">
+             <img 
+               src={client.img} 
+               alt={client.name} 
+               className="w-full h-full object-cover" 
+             />
           </div>
-          <div>
+          <div className="text-left">
             <h4 
-              className="text-sm font-medium text-black uppercase tracking-wide" 
-              style={{ fontFamily: 'var(--font-manrope)' }}
+              className="text-[12px] font-bold text-black leading-tight" 
+              style={{ fontFamily: 'var(--font-worksans)' }}
             >
               {client.name}
             </h4>
-            <p 
-              className="text-[11px] text-gray-500 font-normal"
+            <div 
+              className="text-[10px] text-gray-600 font-medium leading-tight mt-0.5"
               style={{ fontFamily: 'var(--font-worksans)' }}
             >
-              {client.role}
-            </p>
+              <p>{client.role}</p>
+              <p>{client.uni}</p>
+              <p>{client.loc}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -414,72 +453,76 @@ const Home = () => {
 
 
 
-{/* SECÇÃO 6: PORQUÊ ESCOLHER-NOS */}
-<section id="why-choose-us" className="py-24 px-6 md:px-20 min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#fbc2eb] via-[#a6c1ee] to-[#c2e9fb] relative overflow-hidden">
+{/* SECÇÃO 6: PORQUÊ ESCOLHER-NOS - ALINHAMENTO EXATO E FUNCIONAL */}
+<section id="why-choose-us" className="py-10 md:py-16 px-6 md:px-20 min-h-[80vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#fbc2eb] via-[#a6c1ee] to-[#6d94df] relative overflow-hidden">
   
-  {/* Texto de Cabeçalho */}
-  <div className="text-center mb-20 max-w-3xl">
+  {/* Header Text - Fixed Line Breaks */}
+  <div className="text-center mb-16">
     <p 
-      className="text-[11px] font-medium tracking-[0.2em] uppercase text-black/60 mb-4" 
+      className="text-[11px] font-bold tracking-tight text-black mb-4" 
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
-      Porquê escolher-nos
+      Por que nos escolher
     </p>
+    
+    {/* Main title in one line */}
     <h2 
-      className="text-4xl md:text-6xl font-medium text-black mb-6 tracking-tight px-2" 
+      className="text-3xl md:text-[52px] font-medium text-black mb-6 tracking-tight whitespace-nowrap" 
       style={{ fontFamily: 'var(--font-manrope)' }}
     >
-      O seu parceiro de vistos de confiança
+      O seu parceiro de confiança em vistos
     </h2>
+    
+    {/* Subtext in two lines */}
     <p 
-      className="text-black/70 text-sm md:text-base font-normal leading-relaxed px-4" 
+      className="text-black/70 text-xs md:text-sm max-w-lg mx-auto leading-relaxed" 
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
-      A One Link oferece serviços de vistos excecionais, adaptados às suas necessidades únicas.
+      A One Link Travel oferece serviços de vistos de excelência, adaptados <br className="hidden md:block" /> às suas necessidades.
     </p>
   </div>
 
-  {/* Grelha de Características - Responsiva */}
-  <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 mb-20">
+  {/* Features Grid */}
+  <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
     {[
       {
         title: "Serviço profissional",
-        desc: "Consultores experientes que compreendem os requisitos de viagens internacionais.",
+        desc: "Consultores experientes que compreendem os requisitos internacionais.",
         icon: (
-          <svg className="w-12 h-12 mb-8 mx-auto text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+          <svg className="w-14 h-14 mb-6 mx-auto text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
           </svg>
         )
       },
       {
         title: "Processamento rápido",
-        desc: "Gestão eficiente de candidaturas para lhe poupar tempo e stress.",
+        desc: "Gestão eficiente do processo para poupar tempo e reduzir o stress.",
         icon: (
-          <svg className="w-12 h-12 mb-8 mx-auto text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+          <svg className="w-14 h-14 mb-6 mx-auto text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         )
       },
       {
-        title: "Tarifas acessíveis",
-        desc: "Preços competitivos sem comprometer a qualidade e o suporte oferecido.",
+        title: "Preços acessíveis",
+        desc: "Preços competitivos sem comprometer a qualidade e o apoio.",
         icon: (
-          <svg className="w-12 h-12 mb-8 mx-auto text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+          <svg className="w-14 h-14 mb-6 mx-auto text-black/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" />
           </svg>
         )
       }
     ].map((feature, i) => (
-      <div key={i} className="text-center px-4 transition-transform hover:scale-105">
+      <div key={i} className="text-center px-4">
         {feature.icon}
         <h3 
-          className="text-2xl md:text-3xl font-medium text-black mb-4" 
+          className="text-2xl md:text-[32px] font-medium text-black mb-4" 
           style={{ fontFamily: 'var(--font-manrope)' }}
         >
           {feature.title}
         </h3>
         <p 
-          className="text-black/60 text-[14px] leading-relaxed max-w-[280px] mx-auto" 
+          className="text-black/60 text-[13px] leading-relaxed max-w-[260px] mx-auto" 
           style={{ fontFamily: 'var(--font-worksans)' }}
         >
           {feature.desc}
@@ -488,11 +531,11 @@ const Home = () => {
     ))}
   </div>
 
-  {/* Botões CTA - Empilhamento vertical em mobile */}
-  <div className="flex flex-col md:flex-row items-center gap-8">
+  {/* CTA Buttons with onClick Handlers */}
+  <div className="flex items-center justify-center gap-8">
     <button 
       onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-      className="w-full md:w-auto bg-white/90 backdrop-blur-sm text-black px-10 py-4 rounded-full font-medium text-sm hover:bg-white transition-all shadow-md border border-black/10 active:scale-95"
+      className="bg-white/90 backdrop-blur-sm text-black px-10 py-3 rounded-full font-bold text-sm hover:bg-white transition-all shadow-sm border border-black/10 active:scale-95"
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
       Agendar consulta
@@ -500,16 +543,21 @@ const Home = () => {
     
     <button 
       onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-      className="flex items-center gap-2 text-sm font-medium text-black hover:opacity-70 transition-all active:scale-95"
+      className="flex items-center gap-1.5 text-sm font-bold text-black hover:opacity-70 transition-all active:scale-95"
       style={{ fontFamily: 'var(--font-worksans)' }}
     >
       Saiba mais
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
       </svg>
     </button>
   </div>
 </section>
+
+
+
+
+
 
 {/* SECTION 7: A NOSSA EQUIPA */}
 <section id="team" className="py-20 px-6 text-center bg-gradient-to-br from-[#f8c1cc] via-[#b4c6ef] to-[#7195e0] min-h-[85vh] flex flex-col justify-center overflow-hidden">
@@ -605,6 +653,10 @@ const Home = () => {
 </section>
 
 
+
+
+
+
 {/* SECTION 8: PERGUNTAS FREQUENTES */}
 <section id="faq" className="py-24 px-6 md:px-20 min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#f8c1cc] via-[#b4c6ef] to-[#7195e0]">
   
@@ -616,12 +668,12 @@ const Home = () => {
     >
       Perguntas Frequentes
     </h2>
-    <p 
-      className="text-black/80 text-sm md:text-base font-normal max-w-xl mx-auto" 
-      style={{ fontFamily: 'var(--font-worksans)' }}
-    >
-      Encontre respostas às perguntas mais comuns sobre os nossos serviços de vistos
-    </p>
+   <p 
+  className="text-black/80 text-sm md:text-base font-normal max-w-none mx-auto whitespace-nowrap" 
+  style={{ fontFamily: 'var(--font-worksans)' }}
+>
+  Encontre respostas às perguntas mais comuns sobre os nossos serviços de vistos
+</p>
   </div>
 
   {/* FAQ Grid with Specific Icons from Screenshot */}
@@ -712,30 +764,29 @@ const Home = () => {
 
 
 
-
-{/* SECÇÃO 9: CONTACTO */}
-<section id="contact" className="py-24 px-6 md:px-20 min-h-[90vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#fcc2ab] via-[#a6c1ee] to-[#6d94df]">
+{/* SECÇÃO 9: CONTACTO - FIEL AO SCREENSHOT */}
+<section id="contact" className="py-20 px-6 md:px-20 min-h-[85vh] flex flex-col items-center justify-center bg-gradient-to-br from-[#fcc2ab] via-[#a6c1ee] to-[#6d94df]">
   
-  {/* Texto de Cabeçalho */}
-  <div className="text-center mb-20">
+  {/* Texto de Cabeçalho - Alinhamento Exato */}
+  <div className="text-center mb-16">
     <h2 
-      className="text-5xl md:text-6xl font-medium text-black mb-6 tracking-tight" 
+      className="text-5xl md:text-7xl font-medium text-black mb-6 tracking-tight" 
       style={{ fontFamily: 'var(--font-manrope)' }}
     >
       Contacto
     </h2>
-    <div className="space-y-2">
+    <div className="space-y-1">
       <p 
-        className="text-[11px] font-bold tracking-[0.4em] uppercase text-black" 
+        className="text-[12px] font-bold text-black" 
         style={{ fontFamily: 'var(--font-worksans)' }}
       >
-        Sinta-se à vontade para entrar em contacto connosco
+        Sinta se à vontade para entrar em contacto connosco
       </p>
       <p 
-        className="text-black/70 text-sm md:text-base font-normal" 
+        className="text-black/80 text-[13px] md:text-base font-normal" 
         style={{ fontFamily: 'var(--font-worksans)' }}
       >
-        A nossa equipa está pronta para fornecer orientação personalizada
+        A nossa equipa está pronta para prestar orientação personalizada
       </p>
     </div>
   </div>
@@ -745,40 +796,38 @@ const Home = () => {
     
     {/* Coluna Email */}
     <div className="flex flex-col items-center text-center">
-      <svg className="w-10 h-10 mb-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+      <svg className="w-9 h-9 mb-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
-      <h3 className="text-3xl font-medium text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
-        E-mail
+      <h3 className="text-4xl font-normal text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
+        Email
       </h3>
-      <p className="text-black/60 text-[13px] leading-relaxed mb-6 max-w-[240px]" style={{ fontFamily: 'var(--font-worksans)' }}>
-        Contacte-nos para assistência imediata e orientação profissional
+      <p className="text-black/70 text-[13px] leading-snug mb-5 max-w-[240px]" style={{ fontFamily: 'var(--font-worksans)' }}>
+        Entre em contacto connosco para assistência imediata e orientação profissional
       </p>
       <a 
-        href="mailto:onelinkholding.geral@gmail.com?subject=Inquérito sobre os serviços One Link" 
-        className="text-[11px] font-medium border-b border-black pb-1 tracking-tight hover:opacity-60 transition-all"
+        href="mailto:onelinkholding.geral@gmail.com" 
+        className="text-[11px] font-medium border-b border-black pb-0.5 tracking-tight hover:opacity-60 transition-all"
         style={{ fontFamily: 'var(--font-worksans)' }}
       >
         onelinkholding.geral@gmail.com
       </a>
     </div>
 
-    {/* Coluna WhatsApp */}
+    {/* Coluna Telefone */}
     <div className="flex flex-col items-center text-center">
-      <svg className="w-10 h-10 mb-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+      <svg className="w-9 h-9 mb-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
       </svg>
-      <h3 className="text-3xl font-medium text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
-        WhatsApp
+      <h3 className="text-4xl font-normal text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
+        Telefone
       </h3>
-      <p className="text-black/60 text-[13px] leading-relaxed mb-6 max-w-[240px]" style={{ fontFamily: 'var(--font-worksans)' }}>
-        A nossa equipa de suporte está disponível para chat instantâneo e consulta
+      <p className="text-black/70 text-[13px] leading-snug mb-5 max-w-[240px]" style={{ fontFamily: 'var(--font-worksans)' }}>
+        A nossa equipa de apoio está disponível durante o horário comercial
       </p>
       <a 
-        href="https://wa.me/244922475109?text=Olá! Estou interessado nos vossos serviços de vistos." 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[11px] font-medium border-b border-black pb-1 tracking-tight hover:opacity-60 transition-all"
+        href="tel:+244922475109" 
+        className="text-[11px] font-medium border-b border-black pb-0.5 tracking-tight hover:opacity-60 transition-all"
         style={{ fontFamily: 'var(--font-worksans)' }}
       >
         +244 922 475 109
@@ -787,28 +836,30 @@ const Home = () => {
 
     {/* Coluna Escritório */}
     <div className="flex flex-col items-center text-center">
-      <svg className="w-10 h-10 mb-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1">
+      <svg className="w-9 h-9 mb-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
-      <h3 className="text-3xl font-medium text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
+      <h3 className="text-4xl font-normal text-black mb-4" style={{ fontFamily: 'var(--font-manrope)' }}>
         Escritório
       </h3>
-      <p className="text-black/60 text-[13px] leading-relaxed mb-6 max-w-[260px]" style={{ fontFamily: 'var(--font-worksans)' }}>
+      <p className="text-black/70 text-[13px] leading-snug mb-5 max-w-[260px]" style={{ fontFamily: 'var(--font-worksans)' }}>
         Visite a nossa sede no coração de Angola
       </p>
-      <a 
-        href="https://www.google.com/maps/search/Maculusso,+Rua+Joaquim+Capango,+Luanda" 
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-[10px] font-medium border-b border-black pb-1 leading-relaxed max-w-[280px] hover:opacity-60 transition-all text-center md:text-left"
-        style={{ fontFamily: 'var(--font-worksans)' }}
-      >
-        Maculusso, Rua Joaquim Capango, Igreja Sagrada Família, Prédio 65, 2ºAndar, Porta 7.
-      </a>
+     <a 
+  href="https://maps.google.com/?cid=12783176811415827790&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-[10px] font-medium border-b border-black pb-0.5 leading-relaxed max-w-[280px] hover:opacity-60 transition-all cursor-pointer"
+  style={{ fontFamily: 'var(--font-worksans)' }}
+>
+  Maculusso, Rua Joaquim Capango, Referência: Igreja Sagrada Família, Prédio 65, 2ºAndar, Porta 7.
+</a>
     </div>
   </div>
 </section>
+
+
 
 
 {/* SECTION 10: ENTRE EM CONTACTO CONNOSCO */}
