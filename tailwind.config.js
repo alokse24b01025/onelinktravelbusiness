@@ -2,7 +2,8 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}", // Check if your components are in /src
+    "./components/**/*.{js,ts,jsx,tsx}", // Add this if you have a components folder
   ],
   theme: {
     extend: {},

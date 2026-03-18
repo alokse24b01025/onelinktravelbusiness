@@ -13,9 +13,10 @@
   --font-worksans: 'Work Sans', sans-serif;
 }
 
-body {
-  /* Matching the blue-purple-pink aesthetic from your screenshot */
-  background: linear-gradient(135deg, #fce7f3 0%, #e0e7ff 40%, #818cf8 100%);
-  background-attachment: fixed;
-  min-height: 100vh;
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* This kills the side-scroll */
+  position: relative;
+  margin: 0;
+  padding: 0;
 }
